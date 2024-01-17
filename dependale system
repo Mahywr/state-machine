@@ -1,0 +1,21 @@
+if state == "OFF":
+    if transition == "b1":
+        state = "L0"
+    elif transition == "b2":
+        state = "L0"
+    elif transition == "c1":
+        state = "L1"
+    elif transition == "c2":
+        state = "L2"
+elif state == "L0":
+    state = "OFF"
+elif state == "L1":
+    if transition == "c1":
+        state = "L2"
+    elif transition == "c2":
+        state = "L0"
+elif state == "L2":
+    if transition == "c1":
+        state = "L1"
+    elif transition == "c2":
+        state = "L0"
